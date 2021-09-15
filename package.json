@@ -1,0 +1,29 @@
+{
+  "name": "webtube",
+  "version": "1.0.0",
+  "description": "The best way to watch a videos.",
+  "scripts": {
+    "dev": "nodemon --exec babel-node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jeonneung/webtube.git"
+  },
+  "author": "Jeonneung",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Jeonneung/webtube/issues"
+  },
+  "homepage": "https://github.com/Jeonneung/webtube#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/node": "^7.14.9",
+    "@babel/preset-env": "^7.14.7",
+    "nodemon": "^2.0.12"
+  }
+}
