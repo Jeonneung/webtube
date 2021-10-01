@@ -2,7 +2,7 @@ import User from "../models/User";
 import bcrypt from "bcrypt";
 
 export const getJoin = (req, res) => res.render("join", { pageTitle: "Join" });
-export const postJoin = (req, res) => {
+export const postJoin = async (req, res) => {
   const { name, username, email, password, password2, location } = req.body;
   const pageTitle = "Join";
   if (password !== password2) {
@@ -55,6 +55,8 @@ export const postLogin = async (req, res) => {
       errorMessage: "Wrong password.",
     });
   } //check if password correct
+  req.session.loggedIn = true;
+  req.session.user = user; //adding information to session
   return res.redirect("/");
 };
 export const logout = (req, res) => res.send("logout");
